@@ -1,0 +1,1119 @@
+<!-- index.html -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Home - Upendar Furnitures</title>
+  <link rel="stylesheet" href="style.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+  <link rel="icon" href="/favicon-32x32.png" type="lovv-removebg-preview">
+  <link rel="icon" type="uwb.jpg" href="favicon.ico">
+  <style>
+
+* {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: 'Segoe UI', sans-serif;
+      color: #212121;
+      line-height: 1.6;
+    }
+
+    /* Navbar */
+    .navbar {
+  display: flex;
+  flex-direction: column;
+  background-color: #fff;
+  color: #212121;
+  position: sticky;
+  top: 0; /* This is missing in your code */
+  z-index: 1000; /* Ensures it stays above other content */
+  box-shadow: 0 2px 5px rgba(0,0,0,0.1); /* Optional: adds a slight shadow */
+}
+
+
+    .logo {
+      display: flex;
+      align-items: center;
+      font-size: 1.5rem;
+      font-weight: bold;
+      color: #212121;
+    }
+
+    .logo img {
+      height: 60px;
+      width: auto;
+      margin-right: 10px;
+    }
+
+    .nav-links {
+      list-style: none;
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 20px;
+      padding-right: 15px;
+      padding-top: 20px;
+    }
+
+    .nav-links li a {
+      color: #212121;
+      text-decoration: none;
+      transition: color 0.3s;
+    }
+
+    .nav-links li a:hover,
+    .nav-links li a.active {
+      color: #B71C1C;
+    }
+
+    @media (min-width: 769px) {
+      .navbar {
+        flex-direction: row;
+        justify-content: space-between;
+      }
+      .logo {
+        margin-bottom: 0;
+      }
+    }
+
+    /* Hero Section */
+    .hero {
+      height: 85vh;
+      background: url('') center/cover no-repeat;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      color: #fff;
+      position: relative;
+    }
+    .hero-content{
+      padding-top: 120px;
+    }
+
+    .hero::after {
+      position: absolute;
+      inset: 0;
+      background: rgba(33, 33, 33, 0.4);
+    }
+
+    .hero h1, .hero p {
+      opacity: 0;
+      animation: fadeInText 1s ease forwards;
+      color: white;
+      font-size:20px;
+    }
+    .hero p{
+      color: #212121;
+    }
+
+    .hero h1 { animation-delay: 0.3s; }
+    .hero p { animation-delay: 0.4s; }
+
+    .explore-btn {
+      margin-top: 25px;
+      padding: 10px 25px;
+      background-color: #B71C1C;
+      border: none;
+      color: white;
+      font-size: 1rem;
+      border-radius: 5px;
+      cursor: pointer;
+      transition: background-color 0.3s;
+      animation: fadeInText 1s ease forwards;
+      animation-delay: 0.5s;
+      opacity: 0;
+    }
+    .explore-btn:hover {
+      background-color: #a01717;
+    }
+
+    @keyframes fadeInText {
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+      from {
+        opacity: 0;
+        transform: translateY(20px);
+      }
+    }
+    .bestsellers {
+      background-color: #fff;
+      text-align: center;
+      padding: 50px 20px;
+      position: relative;
+      z-index: 1;
+      padding-bottom: 30px;
+    }
+
+    .bestsellers h2 {
+      font-size: 2rem;
+      color: #B71C1C;
+      margin-bottom: 30px;
+    }
+    .bestseller-grid {
+  display: flex;
+  flex-wrap: nowrap; /* NO WRAPPING! */
+  gap: 20px;
+  transition: transform 0.5s ease;
+}
+
+
+    .bestseller-item {
+      width: 200px;
+    }
+
+    .bestseller-item img {
+      width: 100%;
+      height: 60%;
+      border-radius: 8px;
+    }
+
+    .bestseller-item p {
+      margin-top: 10px;
+      font-weight: 600;
+      color: #212121;
+    }
+
+    @media (max-width: 768px) {
+      .bestseller-grid {
+        display: none;
+      }
+      .mobile-bestseller {
+  position: relative;
+  height: 320px;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+  margin-bottom: 20px;
+}
+
+.mobile-bestseller img {
+  max-width: 90%;
+  max-height: 80%;
+  object-fit: contain;
+  border-radius: 8px;
+  position: absolute;
+  opacity: 0;
+  transition: opacity 0.5s ease;
+}
+
+.mobile-bestseller img.active {
+  opacity: 1;
+}
+.dot-indicators {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+}
+
+}
+
+.content {
+      padding: 10px 30px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      flex-wrap: wrap;
+      position: relative;
+      z-index: 0;
+    }
+
+    .content-text {
+      flex: 1;
+      min-width: 280px;
+      padding-right: 20px;
+    }
+
+    .content-image {
+      flex: 1;
+      min-width: 280px;
+      text-align: center;
+      margin-top: 30px;
+    }
+
+    .content h2 {
+      font-size: 2rem;
+      margin-bottom: 20px;
+      color: #B71C1C;
+    }
+
+    .content p {
+      max-width: 800px;
+    }
+
+    .content-image img {
+      max-width: 100%;
+      height: auto;
+      max-height: 250px;
+      border-radius: 2px;
+    }
+    .dot-indicators {
+  display: flex;
+  justify-content: center;
+  margin-top: 310px;
+  gap: 10px;
+}
+
+.dot-indicators .dot {
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  background-color: #ccc;
+  transition: background-color 0.3s;
+}
+
+.dot-indicators .dot.active {
+  background-color: #B71C1C;
+}
+.bestseller-container {
+  overflow-x: hidden; /* Hide scrollbars, but allow internal movement */
+  width: 100%;
+  position: relative;
+}
+
+.bestseller-grid {
+  display: flex;
+  gap: 20px;
+  transition: transform 0.5s ease;
+}
+
+.bestseller-item {
+  min-width: 200px;
+}
+.button-container {
+  display: flex;
+  justify-content: center;
+  gap: 40px;
+  margin-top: 20px;
+}
+
+.prev-btn, .next-btn {
+  background: none;
+  border: none;
+  cursor: pointer;
+}
+
+.prev-btn i, .next-btn i {
+  color: #B71C1C;
+  font-size: 1.5rem; /* Size of the arrow */
+  transition: transform 0.3s;
+  padding-top: 30px;
+}
+
+.prev-btn i:hover, .next-btn i:hover {
+  transform: scale(1.3);
+}
+
+.search-bar {
+  max-width: 800px;
+  padding: 10px;
+  border-radius: 25px;
+  border: 1px solid #B71C1C;
+  font-size: 1rem;
+  padding-left: 30px;
+
+}
+
+.search-bar::placeholder {
+  color: #a9a8a8;
+}
+.search-container {
+  position: absolute;
+padding-top: 40px;
+  left: 50%;
+  transform: translateX(-50%);
+  display: flex;
+  z-index: 2;
+
+}
+.search-btn {
+padding-left: 5px;
+  border: none;
+  background-color: transparent;
+  border-radius: 25px;
+  cursor: pointer;
+  color: white;
+}
+.main-buttons button.active {
+  transform: scale(1.1);
+  background-color: #8B0000; /* darker red for highlight */
+}
+.navbar span{
+  color: #B71C1C;
+  padding-left: 5px;
+}
+
+@media (max-width: 768px) {
+  .bestseller-container, .next-btn {
+    display: none;
+  }
+}
+
+@media (max-width: 768px) {
+  .bestseller-container, 
+  .button-container {
+    display: none;
+  }
+}
+
+@media (min-width: 769px) {
+  .mobile-bestseller {
+    display: none;
+  }
+
+}
+.content{
+  background-color: whitesmoke;
+  
+}
+.content h2{
+  color: #B71C1C;
+  
+}
+.content p {
+  color: black;
+}
+.footer-extra {
+  background-color: black;
+  padding: 40px 20px;
+  display: flex;
+  justify-content: center;
+}
+
+.footer-columns {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  max-width: 1000px;
+  width: 100%;
+  gap: 30px;
+}
+
+.footer-contact, .footer-links {
+  flex: 1;
+  min-width: 250px;
+ 
+}
+
+.footer-contact h3, .footer-links h3 {
+  color: #212121;
+  margin-bottom: 15px;
+}
+
+.footer-contact p, .footer-links ul li a {
+  color: gray;
+  line-height: 1.8;
+  text-decoration: none;
+}
+
+.navbar-nav {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    justify-content: center;
+    width: 100%;
+  }
+  .navbar-nav .nav-item {
+    margin: 0 15px;
+  }
+  .nav-link {
+    color: #fff !important;
+    font-weight: 500;
+    transition: color 0.3s;
+  }
+  .nav-link:hover,
+  .nav-link.active {
+    color: #B71C1C !important;
+  }
+  footer {
+      text-align: center;
+      padding: 20px;
+      background-color: #212121;
+      color: hsl(0, 0%, 50%);
+  }
+
+  .why-upendar h2,
+  .book-appointment-section h2 {
+    font-weight: bold;
+    color: #333;
+  }
+  .why-upendar .features-row {
+    display: flex;
+    flex-wrap: nowrap;
+    justify-content: space-between;
+    gap: 15px;
+  }
+  .why-upendar .feature-box {
+    flex: 0 0 auto;
+    width: 300px;
+    padding: 20px;
+    background: white;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  }
+  .feature-icon {
+    font-size: 2.5rem;
+    color: #0d6efd;
+  }
+  .book-appointment-section p {
+    max-width: 600px;
+    margin: 0 auto;
+    color: #555;
+  }
+  .whatsapp-btn {
+    background-color: #244631;
+    color: white;
+    font-size: 1.1rem;
+    padding: 12px 25px;
+    border-radius: 50px;
+    text-decoration: none;
+    transition: background-color 0.3s;
+  }
+  .whatsapp-btn:hover {
+    background-color: #1ebc57;
+  }
+  </style>
+
+<script>
+  const mobileImages = [
+    "https://m.media-amazon.com/images/I/81XQs+82MFL.jpg",
+    "https://5.imimg.com/data5/ANDROID/Default/2023/6/314307556/YS/HZ/WY/145611359/product-jpeg.jpg",
+    "https://m.media-amazon.com/images/I/61KQzJTFTpL.jpg",
+    "https://m.media-amazon.com/images/I/71CtHFI8ZLL.jpg",
+    "https://woodstage.in/wp-content/uploads/2021/11/main-33.jpg",
+    "https://www.themaark.com/image/cache/catalog/MAARK%20PLAIN%20DIWAN%20RF/interior-1000x1000.jpg",
+    "rty-removebg-preview.png"
+  ];
+
+  let currentImage = 0;
+  let autoSlideInterval;
+  let userInteracted = false;
+
+  function showImage(index) {
+    const img = document.getElementById("mobileImg");
+    img.classList.remove("active");
+    setTimeout(() => {
+      img.src = mobileImages[index];
+      img.classList.add("active");
+      updateDots();
+    }, 200);
+  }
+
+  function prevImage() {
+    currentImage = (currentImage - 1 + mobileImages.length) % mobileImages.length;
+    showImage(currentImage);
+    stopAutoSlide();
+  }
+
+  function nextImage() {
+    currentImage = (currentImage + 1) % mobileImages.length;
+    showImage(currentImage);
+    stopAutoSlide();
+  }
+
+  function createDots() {
+    const dotContainer = document.getElementById("dotIndicators");
+    dotContainer.innerHTML = "";
+    mobileImages.forEach((_, i) => {
+      const dot = document.createElement("div");
+      dot.classList.add("dot");
+      if (i === currentImage) dot.classList.add("active");
+      dot.addEventListener("click", () => {
+        currentImage = i;
+        showImage(currentImage);
+        stopAutoSlide();
+      });
+      dotContainer.appendChild(dot);
+    });
+  }
+
+  function updateDots() {
+    const dots = document.querySelectorAll(".dot");
+    dots.forEach((dot, i) => {
+      dot.classList.toggle("active", i === currentImage);
+    });
+  }
+
+  function startAutoSlide() {
+    autoSlideInterval = setInterval(() => {
+      if (!userInteracted) {
+        currentImage = (currentImage + 1) % mobileImages.length;
+        showImage(currentImage);
+      }
+    }, 2000); // Image changes every 1 second
+  }
+
+  function stopAutoSlide() {
+    userInteracted = true;
+    clearInterval(autoSlideInterval);
+  }
+
+  window.onload = () => {
+    const img = document.getElementById("mobileImg");
+    img.src = mobileImages[currentImage];
+    img.classList.add("active");
+    createDots();
+    startAutoSlide();
+  };
+
+  let touchStartX = 0;
+  let touchEndX = 0;
+
+  function handleGesture() {
+    if (touchEndX < touchStartX - 50) {
+      nextImage();
+    }
+    if (touchEndX > touchStartX + 50) {
+      prevImage();
+    }
+  }
+
+  document.addEventListener("DOMContentLoaded", () => {
+    const mobileImg = document.getElementById("mobileImg");
+
+    mobileImg.addEventListener("touchstart", (e) => {
+      touchStartX = e.changedTouches[0].screenX;
+    });
+
+    mobileImg.addEventListener("touchend", (e) => {
+      touchEndX = e.changedTouches[0].screenX;
+      handleGesture();
+      stopAutoSlide();
+    });
+  });
+  
+  let scrollAmount = 0;
+
+function scrollNext() {
+  const container = document.getElementById("bestsellerGrid");
+  const itemWidth = container.querySelector(".bestseller-item").offsetWidth + 20; // + gap
+  scrollAmount += itemWidth;
+
+  if (scrollAmount > container.scrollWidth - container.clientWidth) {
+    scrollAmount = 0; // Reset to start
+  }
+
+  container.style.transform = `translateX(-${scrollAmount}px)`;
+  
+}
+function scrollPrev() {
+  const container = document.getElementById("bestsellerGrid");
+  const itemWidth = container.querySelector(".bestseller-item").offsetWidth + 20; // 20px gap
+  scrollAmount -= itemWidth;
+
+  if (scrollAmount < 0) {
+    scrollAmount = 0; // Start lo reach ayyindi ante, reset
+  }
+
+  container.style.transform = `translateX(-${scrollAmount}px)`;
+}
+
+function searchProduct() {
+    const input = document.getElementById("searchInput").value.toLowerCase();
+    const sections = {
+        sofa: 'sofa',
+        sofas: 'sofa',
+        bed: 'beds',
+        beds: 'beds',
+        dining: 'dining',
+        table: 'tables',
+        doors: 'doors',
+        wardrobe: 'wardrobe',  // example for future
+        // ikada vere categories add cheyyachu
+    };
+
+    for (const keyword in sections) {
+        if (input.includes(keyword)) {
+            window.location.href = `gallery.html?section=${sections[keyword]}`;
+            return;
+        }
+    }
+  alert("No results found!");
+}
+
+
+document.getElementById("searchInput").addEventListener("keydown", function(event) {
+    if (event.key === "Enter") {
+        event.preventDefault();
+        searchProduct();
+    }
+});
+
+window.addEventListener("DOMContentLoaded", function() {
+  const searchInput = document.getElementById("searchInput");
+  
+  searchInput.addEventListener("keydown", function(event) {
+    if (event.key === "Enter") {
+      event.preventDefault();
+      searchProduct();
+    }
+  });
+
+  // optional: Button click kuda already onclick vundhi, so adhi work chesthundi
+});
+const input = document.getElementById("searchInput");
+
+// Run search on Enter key press
+input.addEventListener("keypress", function(event) {
+  if (event.key === "Enter") {
+    event.preventDefault(); // Prevent form submit if inside a form
+    search(); // Call your custom function
+  }
+});
+
+function search() {
+  const query = input.value.trim();
+  if (query !== "") {
+    window.location.href = `search.html?query=${encodeURIComponent(query)}`;
+  }
+}
+</script>   
+<style>
+  .menu-toggle {
+  display: none;
+  background: none;
+  border: none;
+  font-size: 1.5rem;
+  color: #B71C1C;
+  cursor: pointer;
+}
+
+@media (max-width: 768px) {
+  .menu-toggle {
+    display: block;
+    position: absolute;
+    right: 20px;
+    top: 25px;
+    z-index: 1001;
+  }
+
+  .nav-links {
+    display: none;
+    flex-direction: column;
+    background-color: white;
+    width: 100%;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    z-index: 1000;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+    transition: max-height 0.4s ease-in-out;
+  }
+
+  .nav-links.open {
+    display: flex;
+  }
+
+  .nav-links li {
+    padding: 12px 20px;
+    border-bottom: 1px solid #ddd;
+    text-align: left;
+  }
+}
+
+</style>
+<script>
+  function toggleMenu() {
+  const navLinks = document.querySelector(".nav-links");
+  navLinks.classList.toggle("open");
+}
+</script>
+  
+</head>
+<body>
+  <header class="navbar">
+    <div class="logo">
+      <img src="Brown_Black_Simple_Sawmill_Logo-removebg-preview.png" alt="Logo">
+      Upendar  <span> Wood works</span>
+    </div>
+    <!-- Add this button inside .navbar div, preferably after the logo -->
+<button class="menu-toggle" onclick="toggleMenu()">
+  <i class="fas fa-bars"></i>
+</button>
+
+    
+    <ul class="nav-links">
+      <li><a href="" class="active">Home</a></li>
+      <li class="dropdown">
+        About
+        <ul class="dropdown-menu">
+          <li><a href="unit.html">Our Manufacturing Unit</a></li>
+          <li><a href="material.html">Our Material and Quality</a></li>
+          <li><a href="facilities.html">Our Facilities</a></li>
+          <li><a href="advantages.html">Advantages of Our Product</a></li>
+        </ul>
+      </li>
+      <style>
+        /* Dropdown submenu on hover */
+.dropdown {
+  position: relative;
+}
+
+.dropdown-menu {
+  position: absolute;
+  top: 100%;
+  left: 0;
+  background-color: #fff;
+  list-style: none;
+  padding: 10px 0;
+  margin: 0;
+  display: none;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  z-index: 999;
+  min-width: 220px;
+}
+
+.dropdown-menu li {
+  padding: 8px 20px;
+}
+
+.dropdown-menu li a {
+  color: #212121;
+  text-decoration: none;
+  display: block;
+  transition: 0.3s;
+}
+
+.dropdown-menu li a:hover {
+  background-color: #f2f2f2;
+  color: #B71C1C;
+}
+
+.dropdown:hover .dropdown-menu {
+  display: block;
+}
+  </style>
+     
+     <li class="dropdown">
+        Furniture
+        <ul class="dropdown-menu">
+          <li><a href="beds.html">Bed's</a></li>
+          <li><a href="sofas.html">Sofa set</a></li>
+          <li><a href="dining.html">Dining</a></li>
+          <li><a href="">dressing tables</a></li>
+        </ul>
+      </li>
+      <style>
+        /* Dropdown submenu on hover */
+.dropdown {
+  position: relative;
+}
+
+.dropdown-menu {
+  position: absolute;
+  top: 100%;
+  left: 0;
+  background-color: #fff;
+  list-style: none;
+  padding: 10px 0;
+  margin: 0;
+  display: none;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  z-index: 999;
+  min-width: 220px;
+}
+
+.dropdown-menu li {
+  padding: 8px 20px;
+}
+
+.dropdown-menu li a {
+  color: #212121;
+  text-decoration: none;
+  display: block;
+  transition: 0.3s;
+}
+
+.dropdown-menu li a:hover {
+  background-color: #f2f2f2;
+  color: #B71C1C;
+}
+
+.dropdown:hover .dropdown-menu {
+  display: block;
+}
+
+      </style> 
+      <li><a href="contact.html">Contact</a></li>
+    </ul>
+    
+  </header>
+  <section class="hero" id="heroSection">
+    <div class="hero-content" id="heroContent">
+      <h1 id="heroTitle">Welcome to Upendar Wood Works</h1>
+      <p id="heroSubtitle">Crafting Elegance & Comfort for Every Home</p>
+      <a href="FURNITURE.HTML"><button class="explore-btn">Explore Furniture</button></a>
+    </div>
+    <button class="arrow-btn left" onclick="prevSlide()"><i class="fa-solid fa-arrow-left"></i></button>
+    <button class="arrow-btn right" onclick="nextSlide()"><i class="fa-solid fa-arrow-right"></i></button>
+  </section>
+  <script>
+    const heroData = [
+  {
+    image:src="ONE.JPG",
+    title: " Upendar Wood Works",
+    subtitle: " Crafting Elegance & Comfort for Every Home " 
+  },
+  {
+    image:src="two.webp",
+    title: "Premium Quality Furniture",
+    subtitle: "Where Craft Meets Class"
+  },
+  {
+    image:src="qq.webp",
+  }
+];
+
+let currentSlide = 0;
+
+function updateHero() {
+  const hero = document.getElementById("heroSection");
+  const title = document.getElementById("heroTitle");
+  const subtitle = document.getElementById("heroSubtitle");
+
+  // Fade out
+  title.style.opacity = 0;
+  subtitle.style.opacity = 0;
+
+  setTimeout(() => {
+    hero.style.backgroundImage = `url('${heroData[currentSlide].image}')`;
+    title.textContent = heroData[currentSlide].title;
+    subtitle.textContent = heroData[currentSlide].subtitle;
+
+    // Fade in
+    title.style.opacity = 1;
+    subtitle.style.opacity = 1;
+  }, 300);
+}
+
+function nextSlide() {
+  currentSlide = (currentSlide + 1) % heroData.length;
+  updateHero();
+}
+
+function prevSlide() {
+  currentSlide = (currentSlide - 1 + heroData.length) % heroData.length;
+  updateHero();
+}
+
+// Initial setup
+window.addEventListener("DOMContentLoaded", updateHero);
+
+  </script>
+  <style>
+  .arrow-btn {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  border: none;
+  font-size: 1.3rem;
+  padding: 10px 15px;
+  cursor: pointer;
+  z-index: 3;
+  border-radius: 5px;
+  color: whitesmoke;
+  background-color: transparent;
+}
+
+.arrow-btn.left {
+  left: 10px;
+}
+
+.arrow-btn.right {
+  right: 10px;
+}
+  </style>
+  
+  <section class="bestsellers">
+    <h2>Best Sellers</h2>
+    <div class="bestseller-container">
+      <div class="bestseller-grid" id="bestsellerGrid">
+        <div class="bestseller-item">
+          <img src="https://m.media-amazon.com/images/I/81XQs+82MFL.jpg" alt="Wardrobe">
+          <p>Entry Door</p>
+        </div>
+        <div class="bestseller-item">
+          <img src="https://5.imimg.com/data5/SELLER/Default/2023/3/294616885/RY/BU/NK/49306713/wooden-door-frame.jpg" alt="Wardrobe">
+          <p>Entry Door</p>
+        </div>
+        
+        <div class="bestseller-item">
+          <img src="https://m.media-amazon.com/images/I/61KQzJTFTpL.jpg" alt="pandiri mancham">
+          <p>pandiri mancham</p>
+        </div>
+        <div class="bestseller-item">
+          <img src="https://m.media-amazon.com/images/I/71CtHFI8ZLL.jpg" alt="Sofa">
+          <p> Sofa</p>
+        </div>
+        <div class="bestseller-item">
+          <img src="https://woodstage.in/wp-content/uploads/2021/11/main-33.jpg" alt="Dining">
+          <p>Dining Table</p>
+        </div>
+        <div class="bestseller-item">
+          <img src="https://m.media-amazon.com/images/I/71-ub4P6CKL._AC_UF1000,1000_QL80_.jpg" alt="Rocking chair">
+          <p>Rocking Chair</p>
+        </div>
+        <div class="bestseller-item">
+          <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRseZbmQ3daKdLHzFcEIxQBjIfuNOYEulJtdWu5u75OvFfnMGe5Zjw6Zg3GGMfRBYmK-fg&usqp=CAU" alt="Wardrobe">
+          <p>Wardrobe</p>
+        </div>
+        <div class="bestseller-item">
+          <img src="https://ouchcart.com/cdn/shop/products/71c_aXFUEWL._AC_SL1500_569x569_4bc2281b-7eac-4d60-846e-45368d7d8326.jpg?v=1721367909" alt="Chair">
+          <p>Chair</p>
+        </div>
+        <div class="bestseller-item">
+          <img src="https://5.imimg.com/data5/SELLER/Default/2023/11/362068819/SB/ZF/TU/200185738/wooden-carving-bed.jpg" alt="kingbed">
+          <p>King bed</p>
+        </div>
+        <div class="bestseller-item">
+          <img src="https://www.themaark.com/image/cache/catalog/MAARK%20PLAIN%20DIWAN%20RF/interior-1000x1000.jpg" alt="Wardrobe">
+          <p>Diwan cot</p>
+        </div>
+        <div class="bestseller-item">
+          <img src="https://5.imimg.com/data5/SELLER/Default/2024/8/444107347/PU/TC/IS/46649564/wooden-dressing-table.jpg" alt="Wardrobe">
+          <p>Dressing Table</p>
+        </div>
+        <div class="bestseller-item">
+          <img src="https://m.media-amazon.com/images/I/81XQs+82MFL.jpg" alt="Wardrobe">
+          <p>Entery Door</p>
+        </div>
+      </div>
+    </div>
+    <div class="button-container">
+      <button class="prev-btn" onclick="scrollPrev()">
+        <i class="fa-solid fa-arrow-left"></i>
+      </button>
+    
+      <button class="next-btn" onclick="scrollNext()">
+        <i class="fa-solid fa-arrow-right"></i>
+      </button>
+    </div>  
+    <div class="mobile-bestseller">
+      <img id="mobileImg" src="" alt="Mobile Bestseller">
+      <div class="dot-indicators" id="dotIndicators"></div>
+    </div>
+  </section>
+
+  <section class="content">
+    <div class="content-text">
+      <h2>WE LISTEN , WE DESIGN,  WE COMMITTED.</h2>
+      <p>We belive your home should be a reflection of you. We collaborate with clints to create functional and stylish spaces that tell their unique stories. Our passion brings your vision to life, resulting in beautiful and personalized furnitures you'll love.</p>
+    </div>
+    <div class="content-image">
+      <img src="shop.jpg" alt="Craftsmanship">
+    </div>
+  </section>
+ 
+<!-- WhatsApp Contact Section -->
+<section class="whatsapp-contact py-5 bg-light">
+  <div class="container text-center">
+    <h2 class="mb-4">Contact Us on WhatsApp</h2>
+    <p class="mb-4">Have questions or want to place an order? We're just a message away!</p>
+    <a href="https://wa.me/919177134674" target="_blank" class="btn btn-success btn-lg d-inline-flex align-items-center">
+      <i class="fab fa-whatsapp fa-lg me-2"></i> Chat with Us
+    </a>
+  </div>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <style>
+    .whatsapp-contact {
+      background-color: #f8f9fa;
+      padding: 60px 20px;
+      text-align: center;
+    }
+
+    .whatsapp-contact h2 {
+      font-weight: bold;
+      margin-bottom: 10px;
+    }
+
+    .whatsapp-contact a.btn {
+      padding: 12px 24px;
+      font-size: 18px;
+      display: inline-flex;
+      align-items: center;
+      gap: 10px;
+      transition: background-color 0.3s ease;
+      color: whitesmoke;
+      text-decoration: none;
+      background-color: #1ebc57;
+      border-radius: 120px;
+    }
+    .whatsapp-contact p{
+      padding-bottom: 10px;
+    }
+
+    .whatsapp-contact a.btn:hover {
+      background-color: #128c7e;
+    }
+  </style>
+  <div class="download-btn-container text-center my-4">
+    <a href="Upendar (10).pdf" download class="btn btn-download">
+      📥 Download Brochure
+    </a>
+  </div>
+  <style>
+    .btn-download {
+background-color: #28a745;
+color: white;
+padding: 12px 28px;
+font-size: 18px;
+border: none;
+border-radius: 8px;
+text-decoration: none;
+transition: background-color 0.3s ease;
+}
+
+.btn-download:hover {
+background-color: #218838;
+text-decoration: none;
+color: white;
+}
+
+.download-btn-container {
+margin-top: 20px;
+padding-bottom: 30px;
+}
+
+  </style>
+</section>
+  <section class="footer-extra">
+    <div class="footer-columns">
+      <div class="footer-contact">
+        <h3>Contact Us</h3>
+        <p><i class="fa fa-phone"></i> +91 8096414441</p>
+        <p><i class="fa fa-envelope"></i> upendarwoodworks@gmail.com</p>
+        <p><i class="fa fa-map-marker-alt"></i>P50, Sri Raghavendra Nagar Colony , chilkanagar road , Uppal , Hyderabad</p>
+      </div>
+      <div class="footer-links">
+        <h3>Quick Links</h3>
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="gallery.html">Furniture</a></li>
+          <li><a href="services.html">Services</a></li>
+          <li><a href="contact.html">Contact</a></li>
+        </ul>
+      </div>
+    </div>
+    <div>
+    </div>
+  </section>
+  <style>
+    .footer-contact p, .footer-links ul li a {
+  color: hsl(0, 0%, 50%);
+  line-height: 1.8;
+  text-decoration: none;
+}
+  </style>
+  <footer>
+    <p>&copy; 2025 Upendar Furnitures. All rights reserved.</p>
+  </footer>
+</body>
+</html>

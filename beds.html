@@ -1,0 +1,591 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Services - Upendar Furnitures</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+
+  <style>
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    body {
+      font-family: 'Segoe UI', sans-serif;
+      background-color: #E0E0E0;
+      color: #212121;
+    }
+    .navbar {
+  display: flex;
+  flex-direction: column;
+  background-color: #fff;
+  color: #212121;
+  position: sticky;
+  top: 0; /* This is missing in your code */
+  z-index: 1000; /* Ensures it stays above other content */
+  box-shadow: 0 2px 5px rgba(0,0,0,0.1); /* Optional: adds a slight shadow */
+}
+
+
+    .logo {
+      display: flex;
+      align-items: center;
+      font-size: 1.5rem;
+      font-weight: bold;
+      color: #212121;
+    }
+
+    .logo img {
+      height: 60px;
+      width: auto;
+      margin-right: 10px;
+    }
+
+    .nav-links {
+      list-style: none;
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 20px;
+      padding-right: 15px;
+      padding-top: 22px;
+      padding-bottom: 5px;
+    }
+
+    .nav-links li a {
+      color: #212121;
+      text-decoration: none;
+      transition: color 0.3s;
+    }
+
+    .nav-links li a:hover,
+    .nav-links li a.active {
+      color: #B71C1C;
+    }
+
+    @media (min-width: 769px) {
+      .navbar {
+        flex-direction: row;
+        justify-content: space-between;
+      }
+      .logo {
+        margin-bottom: 0;
+      }
+    }
+    
+    
+    @media (min-width: 769px) {
+      .navbar {
+        flex-direction: row;
+        justify-content: space-between;
+      }
+      .logo {
+        margin-bottom: 0;
+      }
+    }
+
+    .services {
+      background: #fefefe;
+      padding: 3rem 1rem;
+    }
+    .services h2 {
+      text-align: center;
+      font-size: 2rem;
+      margin-bottom: 2rem;
+      color: black;
+    }
+    .service-items {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 20px;
+    }
+    .service {
+      position: relative;
+      overflow: hidden;
+      border-radius: 10px;
+    }
+    .service img {
+      width: 100%;
+      height: 200px;
+      object-fit: cover;
+      display: block;
+    }
+    .service::after {
+      content: '';
+      position: absolute;
+      top: 0; left: 0;
+      width: 100%; height: 100%;
+      transition: background 0.3s ease;
+    }
+    .service h3 {
+      position: absolute;
+      top: 50%; left: 50%;
+      transform: translate(-50%, -50%);
+      color: #fff;
+      font-size: 1.5rem;
+      text-align: center;
+      cursor: pointer;
+      z-index: 2;
+    }
+    .service h3::after {
+      content: '';
+      position: absolute;
+      left: 0;
+      bottom: -5px;
+      width: 0;
+      height: 2px;
+      background-color: #B71C1C;
+      transition: width 0.3s ease;
+    }
+    .service :hover::after {
+      width: 100%;
+    }
+
+    /* Image hover remove zoom */
+    .service img:hover {
+      transform: none;
+    }
+
+    /* Mobile responsive */
+    @media (max-width: 992px) {
+      .service-items {
+        grid-template-columns: repeat(2, 1fr);
+      }
+    }
+    @media (max-width: 600px) {
+      .service-items {
+        grid-template-columns: 1fr;
+      }
+      .service img {
+        height: 250px;
+      }
+    }
+    .service h3 {
+  position: absolute;
+  top: 50%; left: 50%;
+  transform: translate(-50%, -50%);
+  color: #fff;
+  font-size: 1.5rem;
+  text-align: center;
+  cursor: pointer;
+  z-index: 2;
+}
+
+.service h3::after {
+  content: '';
+  position: absolute;
+  left: 0;
+  bottom: -5px;
+  width: 0;
+  height: 2px;
+  background-color: #B71C1C;
+  transition: width 0.3s ease;
+}
+
+/* Desktop lo hover lo underline vastundi */
+@media (min-width: 768px) {
+  .service h3:hover::after {
+    width: 100%;
+  }
+}
+
+/* Mobile lo underline always visible */
+@media (max-width: 767px) {
+  .service h3::after {
+    width: 100%;
+  }
+}
+
+
+    footer {
+      background: #212121;
+      color: hsl(0, 0%, 50%);
+      text-align: center;
+      padding: 20px 0;
+      margin-top: auto;
+    }
+
+    .footer-extra {
+  background-color: rgb(0, 0, 0);
+  padding: 40px 20px;
+  display: flex;
+  justify-content: center;
+  padding-top: 20px;
+}
+
+.footer-columns {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  max-width: 1000px;
+  width: 100%;
+  gap: 30px;
+}
+
+.footer-contact, .footer-links {
+  flex: 1;
+  min-width: 250px;
+}
+
+.footer-contact h3, .footer-links h3 {
+  color: whitesmoke;
+  margin-bottom: 15px;
+}
+
+.footer-contact p, .footer-links ul li a {
+  color: gray;
+  line-height: 1.8;
+  text-decoration: none;
+}
+
+.footer-links ul {
+  list-style: none;
+  padding: 0;
+}
+.footer-links ul li a:hover {
+  text-decoration: underline;
+
+}
+  </style>
+
+</head>
+<body>
+   
+  <nav class="navbar">
+    <div class="logo">
+      <img src="Brown_Black_Simple_Sawmill_Logo-removebg-preview.png" alt="Logo">
+      Upendar Wood works
+    </div>
+    <ul class="nav-links">
+      <li><a href="index.html">Home</a></li>
+      <li class="dropdown">
+        About
+        <ul class="dropdown-menu">
+          <li><a href="company.html">Our Manufacturing Unit</a></li>
+          <li><a href="materials.html">Our Material and Quality</a></li>
+          <li><a href="facilities.html">Our Facilities</a></li>
+          <li><a href="advantages.html">Advantages of Our Product</a></li>
+        </ul>
+      </li>
+      <style>
+        /* Dropdown submenu on hover */
+.dropdown {
+  position: relative;
+}
+
+.dropdown-menu {
+  position: absolute;
+  top: 100%;
+  left: 0;
+  background-color: #fff;
+  list-style: none;
+  padding: 10px 0;
+  margin: 0;
+  display: none;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  z-index: 999;
+  min-width: 220px;
+}
+
+.dropdown-menu li {
+  padding: 8px 20px;
+}
+
+.dropdown-menu li a {
+  color: #212121;
+  text-decoration: none;
+  display: block;
+  transition: 0.3s;
+}
+
+.dropdown-menu li a:hover {
+  background-color: #f2f2f2;
+  color: #B71C1C;
+}
+
+.dropdown:hover .dropdown-menu {
+  display: block;
+}
+
+      </style>  
+       <li class="dropdown">
+        Furniture
+        <ul class="dropdown-menu">
+          <li><a href="beds.html">Bed's</a></li>
+          <li><a href="sofas.html">Sofa set</a></li>
+          <li><a href="facilities.html">Dining</a></li>
+          <li><a href="advantages.html">dressing tables</a></li>
+        </ul>
+      </li>
+      <style>
+        /* Dropdown submenu on hover */
+.dropdown {
+  position: relative;
+}
+
+.dropdown-menu {
+  position: absolute;
+  top: 100%;
+  left: 0;
+  background-color: #fff;
+  list-style: none;
+  padding: 10px 0;
+  margin: 0;
+  display: none;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  z-index: 999;
+  min-width: 220px;
+}
+
+.dropdown-menu li {
+  padding: 8px 20px;
+}
+
+.dropdown-menu li a {
+  color: #212121;
+  text-decoration: none;
+  display: block;
+  transition: 0.3s;
+}
+
+.dropdown-menu li a:hover {
+  background-color: #f2f2f2;
+  color: #B71C1C;
+}
+
+.dropdown:hover .dropdown-menu {
+  display: block;
+}
+
+      </style> 
+      <li><a href="contact.html">Contact</a></li>
+    </ul>
+  </nav>
+
+  <section class="services" id="services">
+    <style>
+        .link-bar {
+          display: flex;
+          justify-content: center;
+          gap: 10px;
+          flex-wrap: wrap;
+          padding-bottom: 20px;
+        }
+    
+        .link-bar a {
+          font-size: 13px;
+          color: #2c3e50;
+          text-decoration: none;
+          padding: 10px 20px;
+          border: 2px solid #2c3e50;
+          border-radius: 25px;
+          transition: all 0.4s ease;
+          position: relative;
+          overflow: hidden;
+        }
+    
+        .link-bar a::before {
+          content: '';
+          position: absolute;
+          top: 0;
+          left: -100%;
+          width: 100%;
+          height: 100%;
+          background-color: #2c3e50;
+          transition: left 0.4s ease;
+          z-index: 0;
+        }
+    
+        .link-bar a span {
+          position: relative;
+          z-index: 1;
+        }
+    
+        .link-bar a:hover::before {
+          left: 0;
+        }
+    
+        .link-bar a:hover span {
+          color: #fff;
+        }
+        .link-bar a.active {
+  background-color: #2c3e50;
+  color: #fff;
+  
+}
+      </style>
+    </head> 
+    <div class="link-bar">
+      <a href="" class="active"><span>King Bed's</span></a>
+      <a href="diwan.html"><span>Diwan Cots</span></a>
+      <a href="#"><span>Double Cots</span></a>
+      <a href="pandiri.html"><span>Pandiri mancham</span></a>
+
+    </div>
+    <h2>King bed's</h2>
+    <div class="service-items" id="kingbeds">
+      <a href="bed1.html" class="service">
+        <img src="k1.jpg" alt="Bedroom Furniture">
+       
+      </a>
+      <a href="bed2.html" class="service">
+        <img src="b2.png" alt="Dining Furniture">
+        
+      </a>
+      <a href="bed3.html" class="service">
+        <img src="king1 , 1.webp" alt="Kitchen Furniture">
+        
+      </a>
+      <a href="bed4.html" class="service">
+        <img src="image16.jpeg" alt="Office Furniture">
+    </a>
+    <a href="bed5.html" class="service">
+      <img src="p7.jpg" alt="Dining Furniture">
+      
+    </a>
+    <a href="bed6.html" class="service">
+      <img src="b6.jpg" alt="Kitchen Furniture">
+      
+    </a>
+    <a href="bed7.html" class="service">
+      <img src="b7.png" alt="Office Furniture">
+    </a>
+    <a href="bed8.html" class="service">
+        <img src="p8.webp" alt="Dining Furniture">
+        
+    </a>
+    <a href="bed9.html" class="service">
+        <img src="image2.jpeg" alt="Kitchen Furniture">
+        
+    </a>
+    <a href="bed10.html" class="service">
+        <img src="p15.webp" alt="Office Furniture">
+    </a>
+    <a href="bed11.html" class="service">
+      <img src="p9.jpg" alt="Dining Furniture">
+      
+    </a>
+    <a href="bed12.html" class="service">
+      <img src="p10.jpg" alt="Kitchen Furniture"> 
+    </a>
+    <a href="bed13.html" class="service">
+        <img src="p16.jpeg" alt="Dining Furniture">
+        
+      </a>
+      <a href="bed14.html" class="service">
+        <img src="image13.jpeg" alt="Kitchen Furniture">
+        
+      </a>
+      <a href="bed15.html" class="service">
+        <img src="p14.webp" alt="Office Furniture">
+    </a>
+    <a href="bed16.html" class="service">
+      <img src="B2 (1).jpg" alt="Dining Furniture">
+      
+    </a>
+    <a href="bed17.html" class="service">
+      <img src="c7.webp" alt="Kitchen Furniture">
+      
+    </a>
+    <a href="bed18.html" class="service">
+      <img src="p.jpeg" alt="Office Furniture">
+    </a>
+    <a href="bed19.html" class="service">
+        <img src="p0.jpeg" alt="Dining Furniture">
+        
+      </a>
+      <a href="bed20.html" class="service">
+        <img src="c8.jpg" alt="Kitchen Furniture">
+        
+      </a>
+      <a href="bed21.html" class="service">
+        <img src="c1.jpg" alt="Office Furniture">
+    </a>
+    <a href="bed22.html" class="service">
+      <img src="c2.jpg" alt="Dining Furniture">
+      
+    </a>
+    <a href="bed23.html" class="service">
+      <img src="c3.webp" alt="Kitchen Furniture"> 
+    </a>
+    <a href="bed24.html" class="service">
+        <img src="c4.webp" alt="Dining Furniture">
+        
+      </a>
+      <a href="bed25.html" class="service">
+        <img src="c5.jpg" alt="Kitchen Furniture">
+        
+      </a>
+      <a href="bed26.html" class="service">
+        <img src="c6.jpg" alt="Office Furniture">
+    </a>
+    <a href="bed5.html" class="service">
+      <img src="p20.webp" alt="Dining Furniture">
+      
+    </a>
+    <a href="bed27.html" class="service">
+      <img src="king1 , 1.webp" alt="Kitchen Furniture">
+      
+    </a>
+    <a href="bed28.html" class="service">
+      <img src="p.jpeg" alt="Office Furniture">
+    </a>
+    <a href="bed29.html" class="service">
+        <img src="p0.jpeg" alt="Dining Furniture">
+        
+      </a>
+      <a href="bed30.html" class="service">
+        <img src="p7.jpg" alt="Kitchen Furniture">
+        
+      </a>
+      <a href="bed31.html" class="service">
+        <img src="p8.webp" alt="Office Furniture">
+    </a>
+    <a href="bed32.html" class="service">
+      <img src="p9.jpg" alt="Dining Furniture">
+      
+    </a>
+    <a href="bed33.html" class="service">
+      <img src="p10.jpg" alt="Kitchen Furniture"> 
+    </a>
+    <a href="bed34.html" class="service">
+        <img src="p10.jpg" alt="Kitchen Furniture"> 
+      </a>
+      <a href="bed35.html" class="service">
+        <img src="p10.jpg" alt="Kitchen Furniture"> 
+      </a>
+      <a href="bed36.html" class="service">
+        <img src="p10.jpg" alt="Kitchen Furniture"> 
+      </a>
+   
+    </div>
+  </section>
+
+    
+
+  <section class="footer-extra" id="footer-extra">
+    <div class="footer-columns">
+      <div class="footer-contact">
+        <h3>Contact Us</h3>
+        <p><i class="fa fa-phone"></i> +91 8096414441</p>
+        <p><i class="fa fa-envelope"></i> upendarfurnitures@gmail.com</p>
+        <p><i class="fa fa-map-marker-alt"></i>P50, Sri Raghavendra Nagar Colony , chilkanagar road , Uppal , Hyderabad</p>
+      </div>
+      <div class="footer-links">
+        <h3>Quick Links</h3>
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="about.html">About</a></li>
+          <li><a href="gallery.html">Furniture</a></li>
+          <li><a href="services.html">Services</a></li>
+          <li><a href="contact.html">Contact</a></li>
+        </ul>
+      </div>
+    </div>
+  </section>
+  
+
+  <footer>
+    <p>&copy; 2025 Upendar Furnitures. All rights reserved.</p>
+  </footer>
+
+</body>
+</html>
