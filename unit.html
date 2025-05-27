@@ -1,0 +1,299 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>About Us - Upendar Furnitures</title>
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: 'Segoe UI', sans-serif;
+      color: #212121;
+      line-height: 1.6;
+    }
+
+    .navbar {
+  display: flex;
+  flex-direction: column;
+  background-color: #fff;
+  color: #212121;
+  padding-bottom: 20px;
+  padding-top: 20px;
+
+  position: sticky;
+  top: 0; /* This is missing in your code */
+  z-index: 1000; /* Ensures it stays above other content */
+  box-shadow: 0 2px 5px rgba(0,0,0,0.1); /* Optional: adds a slight shadow */
+}
+
+
+    .logo {
+      display: flex;
+      align-items: center;
+      font-size: 1.5rem;
+      font-weight: bold;
+      color: #212121;
+      margin-bottom: 10px;
+    }
+
+    .logo img {
+      height: 60px;
+      width: auto;
+      margin-right: 10px;
+    }
+
+    .nav-links {
+      list-style: none;
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 20px;
+      padding-top: 19px;
+      padding-right: 15px;
+    }
+
+    .nav-links li a {
+      color: #212121;
+      text-decoration: none;
+      transition: color 0.3s;
+    }
+
+    .nav-links li a:hover,
+    .nav-links li a.active {
+      color: #B71C1C;
+    }
+
+    @media (min-width: 769px) {
+      .navbar {
+        flex-direction: row;
+        justify-content: space-between;
+      }
+      .logo {
+        margin-bottom: 0;
+      }
+    }
+
+    /* About Section */
+    .about-section {
+      padding: 10px 20px;
+      max-width: 1500px;
+      margin: auto;
+    }
+
+    .about-section h2 {
+      text-align: center;
+      margin-bottom: 20px;
+    }
+
+    .about-content {
+      display: flex;
+      flex-direction: column;
+      gap: 30px;
+
+    }
+    .about-text {
+      flex: 2;
+      padding-left: 10px;
+    }
+
+    .about-image {
+      flex: 1;
+      padding-left: 20px;
+      
+    }
+
+    .about-image img {
+      max-width: 100%;
+      height: auto;
+      max-height: 300px;
+    }
+
+    @media (min-width: 768px) {
+      .about-content {
+        flex-direction: row;
+        align-items: flex-start;
+      }
+    }
+
+    /* Footer */
+ 
+    html, body {
+      height: 100%;
+      display: flex;
+      flex-direction: column;
+    }
+
+    .gallery-section {
+      flex: 1;
+    }
+    .about-section span{
+      color: #B71C1C;
+    }
+    .footer-extra {
+  background-color: rgb(0, 0, 0);
+  padding: 40px 20px;
+  display: flex;
+  justify-content: center;
+}
+
+.footer-columns {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  max-width: 1000px;
+  width: 100%;
+  gap: 30px;
+}
+
+.footer-contact, .footer-links {
+  flex: 1;
+  min-width: 250px;
+}
+
+.footer-contact h3, .footer-links h3 {
+  color: whitesmoke;
+  margin-bottom: 15px;
+}
+
+.footer-contact p, .footer-links ul li a {
+  color: hsl(0, 0%, 50%);
+  line-height: 1.8;
+  text-decoration: none;
+}
+
+.footer-links ul {
+  list-style: none;
+  padding: 0;
+}
+
+.footer-links ul li a:hover {
+  text-decoration: underline;
+}
+.footer {
+      background: #212121;
+      color: hsl(0, 0%, 50%);
+      text-align: center;
+      padding: 20px 0;
+      margin-top: auto;
+    }
+
+  </style>
+</head>
+<body>
+  <nav class="navbar">
+    <div class="logo">
+      <img src="Brown_Black_Simple_Sawmill_Logo-removebg-preview.png" alt="Logo">
+      Upendar Wood works
+    </div>
+    <ul class="nav-links">
+      <li><a href="home.html">Home</a></li>
+      <li class="dropdown">
+        About
+        <ul class="dropdown-menu">
+          <li><a href="company.html">Our Manufacturing Unit</a></li>
+          <li><a href="materials.html">Our Material and Quality</a></li>
+          <li><a href="facilities.html">Our Facilities</a></li>
+          <li><a href="advantages.html">Advantages of Our Product</a></li>
+        </ul>
+      </li>
+      <style>
+        /* Dropdown submenu on hover */
+.dropdown {
+  position: relative;
+}
+
+.dropdown-menu {
+  position: absolute;
+  top: 100%;
+  left: 0;
+  background-color: #fff;
+  list-style: none;
+  padding: 10px 0;
+  margin: 0;
+  display: none;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  z-index: 999;
+  min-width: 220px;
+}
+
+.dropdown-menu li {
+  padding: 8px 20px;
+}
+
+.dropdown-menu li a {
+  color: #212121;
+  text-decoration: none;
+  display: block;
+  transition: 0.3s;
+}
+
+.dropdown-menu li a:hover {
+  background-color: #f2f2f2;
+  color: #B71C1C;
+}
+
+.dropdown:hover .dropdown-menu {
+  display: block;
+}
+
+      </style>
+      
+      <li><a href="FURNITURE.HTML">Furniture</a></li>
+      <li><a href="contact.html">Contact</a></li>
+    </ul>
+  </nav>
+
+  <section class="about-section">
+    <h2>Manufacturing <span>Unit</span></h2>
+    <div class="about-content">
+      <div class="about-image">
+        <img src="shop.jpg" alt="" />
+      </div>
+      <div class="about-text">
+        <p><strong>Upendar Wood works</strong>, where craftsmanship meets creativity. With over 20 years of experience in the furniture industry, we pride ourselves on delivering high-quality, handcrafted furniture made using premium materials like teak wood, transforming your space into a true reflection of your style. </p> <br> <p> Every piece we create—from luxurious sofas to custom beds and stylish dining sets—is built with precision, passion, and the finest materials, including durable teak wood. Whether you're furnishing your dream home or enhancing your workspace, our mission is to provide furniture solutions that combine aesthetics with functionality. </p> <br> <p> At Upendar Wood works, customer satisfaction is our top priority. We work closely with each client to understand their vision and deliver results that exceed expectations. Join our growing family of happy clients and experience the timeless beauty of finely crafted teak wood furniture. </p>
+        <p> Every piece we create—from luxurious sofas to custom beds and stylish dining sets—is built with precision, passion, and the finest materials, including durable teak wood. Whether you're furnishing your dream home or enhancing your workspace, our mission is to provide furniture solutions that combine aesthetics with functionality. </p> <br> <p> At Upendar Wood works, customer satisfaction is our top priority. We work closely with each client to understand their vision and deliver results that exceed expectations. Join our growing family of happy clients and experience the timeless beauty of finely crafted teak wood furniture. </p> 
+        
+      </div>
+      <div class="about-image">
+        <img src="image0 (4).jpeg" alt="" />
+      </div>
+     
+    </div>
+  </section>
+
+  
+
+
+  <section class="footer-extra">
+    <div class="footer-columns">
+      <div class="footer-contact">
+        <h3>Contact Us</h3>
+        <p><i class="fa fa-phone"></i> +91 8096414441</p>
+        <p><i class="fa fa-envelope"></i> upendarfurnitures@gmail.com</p>
+        <p><i class="fa fa-map-marker-alt"></i> Chilkanagar road , uppal , Hyderabad , 500039 </p>
+      </div>
+      <div class="footer-links">
+        <h3>Quick Links</h3>
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="about.html">About</a></li>
+          <li><a href="gallery.html">Furniture</a></li>
+          <li><a href="services.html">Services</a></li>
+          <li><a href="contact.html">Contact</a></li>
+        </ul>
+      </div>
+    </div>
+  </section>
+  
+
+  <footer class="footer">
+    <p>&copy; 2025 Upendar Furnitures. All rights reserved.</p>
+  </footer>
+</body>
+</html>

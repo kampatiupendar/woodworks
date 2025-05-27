@@ -1,0 +1,388 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>About Us - Upendar Furnitures</title>
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
+  <body>
+    <nav class="navbar">
+    <div class="logo">
+      <img src="Brown_Black_Simple_Sawmill_Logo-removebg-preview.png" alt="Logo">
+      Upendar Wood works
+    </div>
+    <ul class="nav-links">
+      <li><a href="home.html">Home</a></li>
+      <li class="dropdown">
+        About
+        <ul class="dropdown-menu">
+          <li><a href="company.html">Our Manufacturing Unit</a></li>
+          <li><a href="materials.html">Our Material and Quality</a></li>
+          <li><a href="facilities.html">Our Facilities</a></li>
+          <li><a href="advantages.html">Advantages of Our Product</a></li>
+        </ul>
+      </li>
+      <style>
+        /* Dropdown submenu on hover */
+.dropdown {
+  position: relative;
+}
+
+.dropdown-menu {
+  position: absolute;
+  top: 100%;
+  left: 0;
+  background-color: #fff;
+  list-style: none;
+  padding: 10px 0;
+  margin: 0;
+  display: none;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  z-index: 999;
+  min-width: 220px;
+}
+
+.dropdown-menu li {
+  padding: 8px 20px;
+}
+
+.dropdown-menu li a {
+  color: #212121;
+  text-decoration: none;
+  display: block;
+  transition: 0.3s;
+}
+
+.dropdown-menu li a:hover {
+  background-color: #f2f2f2;
+  color: #B71C1C;
+}
+
+.dropdown:hover .dropdown-menu {
+  display: block;
+}
+
+      </style>
+      
+      <li><a href="FURNITURE.HTML">Furniture</a></li>
+      <li><a href="contact.html">Contact</a></li>
+    </ul>
+  </nav>
+
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: 'Segoe UI', sans-serif;
+      color: #212121;
+      line-height: 1.6;
+    }
+
+    .navbar {
+  display: flex;
+  flex-direction: column;
+  background-color: #fff;
+  color: #212121;
+  padding-bottom: 20px;
+  padding-top: 20px;
+
+  position: sticky;
+  top: 0; /* This is missing in your code */
+  z-index: 1000; /* Ensures it stays above other content */
+  box-shadow: 0 2px 5px rgba(0,0,0,0.1); /* Optional: adds a slight shadow */
+}
+
+
+    .logo {
+      display: flex;
+      align-items: center;
+      font-size: 1.5rem;
+      font-weight: bold;
+      color: #212121;
+      margin-bottom: 10px;
+    }
+
+    .logo img {
+      height: 60px;
+      width: auto;
+      margin-right: 10px;
+    }
+
+    .nav-links {
+      list-style: none;
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 20px;
+      padding-top: 19px;
+      padding-right: 15px;
+    }
+
+    .nav-links li a {
+      color: #212121;
+      text-decoration: none;
+      transition: color 0.3s;
+    }
+
+    .nav-links li a:hover,
+    .nav-links li a.active {
+      color: #B71C1C;
+    }
+
+    @media (min-width: 769px) {
+      .navbar {
+        flex-direction: row;
+        justify-content: space-between;
+      }
+      .logo {
+        margin-bottom: 0;
+      }
+    }
+  </style>
+
+  <style>
+      header {
+      color: black;
+      padding: 20px;
+      text-align: center;
+    }
+
+    h1 {
+      color: #B71C1C;
+    }
+
+    .materials-container {
+      display: flex;
+      flex-direction: column;
+      gap: 30px;
+      padding: 40px 20px;
+      max-width: 1200px;
+      margin: auto;
+    }
+
+    .material-box {
+      display: flex;
+      flex-direction: column;
+      background-color: #fff;
+      border-radius: 8px;
+      overflow: hidden;
+    }
+
+    .material-box img {
+      max-width: 320px;
+      max-height: 250px;
+      object-fit: cover;
+    }
+
+    .material-content {
+      padding: 20px;
+    }
+
+    .material-content h3 {
+      margin-bottom: 10px;
+      color: #B71C1C;
+    }
+
+    .material-content p {
+      margin: 0;
+      line-height: 1.6;
+    }
+
+    @media(min-width: 768px) {
+      .material-box {
+        flex-direction: row;
+      }
+
+      .material-box img {
+        width: 40%;
+        height: auto;
+      }
+
+      .material-content {
+        width: 60%;
+      }
+    }
+
+    /* Footer */
+    .footer {
+      background: #212121;
+      color: hsl(0, 0%, 50%);
+      text-align: center;
+      padding: 20px 0;
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <h1>Materials We Use</h1>
+    <p>Premium Quality Wood for Premium Furniture</p>
+  </header>
+
+  <section class="materials-container">
+    <div class="material-box">
+      <img src="https://5.imimg.com/data5/UE/WR/MY-24187188/window-and-door-frames-500x500.jpg" alt="Teak Wood">
+      <div class="material-content">
+        <h3>1. Burma teak wood (B.T)</h3>
+<strong>Description:</strong>
+Burma Teak is one of the most prized types of teak wood. It is sourced from Myanmar (formerly Burma). It has a rich golden-brown color and a fine grain structure, which gives it a distinctive look and feel. This wood is known for its durability, strength, and resistance to water, making it ideal for high-end furniture. <br>
+
+ <strong>Quality:</strong> <br>
+
+<strong>Durability:</strong> Burma Teak is naturally resistant to termites, rot, and fungi. It has an excellent ability to withstand weather conditions. <br>
+
+<strong>Strength:</strong> This wood is dense and solid, which ensures that it is long-lasting and sturdy. <br>
+
+<strong>Importance in Furniture:</strong>
+Burma Teak is highly regarded for premium furniture due to its strength and resistance to moisture. It’s perfect for outdoor furniture as well as luxury indoor pieces like beds, sofas , Dining set , cabinets, and tables.
+      </div>
+    </div>
+
+    <div class="material-box">
+      <img src="https://images.jdmagicbox.com/rep/b2b/teak-wood/teak-wood-50.jpg" alt="Rosewood">
+      <div class="material-content">
+        <h3>2. Indian Teak</h3>
+        <strong>Description:</strong> <br>
+Indian Teak comes from the native trees of India and is widely available in the region. While it is similar to Burma Teak in many ways, Indian Teak has a slightly lighter color and may not be as resistant to the elements as Burma Teak. However, it still holds great value in furniture-making. <br>
+
+<strong>Quality:</strong> <br>
+
+<strong>Durability:</strong> Indian Teak has decent resistance to termites and rot, but it may need additional treatment to enhance its longevity. <br>
+
+<strong>Strength:</strong> It is solid, though not as dense as Burma Teak, but still sturdy enough for most furniture applications. <br>
+
+
+<strong>Importance in Furniture:</strong> <br>
+Indian Teak is often used in making affordable yet durable furniture. It is suitable for both indoor and outdoor furniture, such as tables, chairs, wardrobes, and doors. It’s especially favored for traditional furniture pieces. <br>
+      </div>
+    </div>
+
+    <div class="material-box">
+      <img src="https://www.rsvwoodindustries.com/images/african-teak.webp" alt="Plywood">
+      <div class="material-content">
+        <h3>African Teak </h3>
+        African Teak, also known as Iroko wood, comes from the tropical forests of West Africa. It has a deep, rich color that can range from yellow to dark brown. African Teak is known for its strength and resistance to decay, making it a great alternative to Burma Teak for many furniture applications.
+      </div>
+    </div>
+
+    <div class="material-box">
+      <img src="https://5.imimg.com/data5/VG/UG/OP/SELLER-3946905/5-inch-x-25-inch-wpc-door-frame.JPG" alt="Hardwood">
+      <div class="material-content">
+        <h3>Wood Plastic Composite (WPC)</h3>
+        <p>Hardwoods like oak and maple are used for their strength and attractive appearance. Suitable for floors, doors, and luxury furniture items.</p>
+      </div>
+    </div>
+  </section>
+  <h3>Finishing Process</h3>
+  <section class="finising">
+    <img src="po.png" alt="">
+  </section>
+  <style>
+    .finising img{
+        width: 980px;
+      height: 880px;
+      padding-bottom: 20px;
+      padding-left: 30px;
+      padding-left: 130px;
+      
+    }
+
+    @media (max-width: 480px) {
+      .finising img{
+      max-width: 340px;
+      height: 400px;
+      padding-left: 35px;
+      }
+    }
+    
+    h3{
+      padding-left: 120px;
+    }
+    
+  </style>
+
+
+
+
+<section class="footer-extra">
+    <div class="footer-columns">
+      <div class="footer-contact">
+        <h3>Contact Us</h3>
+        <p><i class="fa fa-phone"></i> +91 8096414441</p>
+        <p><i class="fa fa-envelope"></i> upendarfurnitures@gmail.com</p>
+        <p><i class="fa fa-map-marker-alt"></i> Chilkanagar road , uppal , Hyderabad , 500039 </p>
+      </div>
+      <div class="footer-links">
+        <h3>Quick Links</h3>
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="about.html">About</a></li>
+          <li><a href="gallery.html">Furniture</a></li>
+          <li><a href="services.html">Services</a></li>
+          <li><a href="contact.html">Contact</a></li>
+        </ul>
+      </div>
+    </div>
+  </section>
+  
+
+  <footer class="footer">
+    <p>&copy; 2025 Upendar Furnitures. All rights reserved.</p>
+  </footer>
+  <style>
+    .footer-extra {
+  background-color: rgb(0, 0, 0);
+  padding: 40px 20px;
+  display: flex;
+  justify-content: center;
+}
+
+.footer-columns {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  max-width: 1000px;
+  width: 100%;
+  gap: 30px;
+}
+
+.footer-contact, .footer-links {
+  flex: 1;
+  min-width: 250px;
+}
+
+.footer-contact h3, .footer-links h3 {
+  color: whitesmoke;
+  margin-bottom: 15px;
+}
+
+.footer-contact p, .footer-links ul li a {
+  color: hsl(0, 0%, 50%);
+  line-height: 1.8;
+  text-decoration: none;
+}
+
+.footer-links ul {
+  list-style: none;
+  padding: 0;
+}
+
+.footer-links ul li a:hover {
+  text-decoration: underline;
+}
+.footer {
+      background: #212121;
+      color: hsl(0, 0%, 50%);
+      text-align: center;
+      padding: 20px 0;
+      margin-top: auto;
+    }
+  </style>
+
+    
+</body>
+</html>
