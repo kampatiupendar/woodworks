@@ -29,6 +29,9 @@
   flex-direction: column;
   background-color: #fff;
   color: #212121;
+  padding-bottom: 20px;
+  padding-top: 20px;
+
   position: sticky;
   top: 0; /* This is missing in your code */
   z-index: 1000; /* Ensures it stays above other content */
@@ -42,6 +45,7 @@
       font-size: 1.5rem;
       font-weight: bold;
       color: #212121;
+      margin-bottom: 10px;
     }
 
     .logo img {
@@ -56,8 +60,8 @@
       flex-wrap: wrap;
       justify-content: center;
       gap: 20px;
+      padding-top: 19px;
       padding-right: 15px;
-      padding-top: 20px;
     }
 
     .nav-links li a {
@@ -92,7 +96,7 @@
       position: relative;
     }
     .hero-content{
-      padding-top: 120px;
+      padding-top: 90px;
     }
 
     .hero::after {
@@ -105,7 +109,7 @@
       opacity: 0;
       animation: fadeInText 1s ease forwards;
       color: white;
-      font-size:20px;
+      font-size:25px;
     }
     .hero p{
       color: #212121;
@@ -741,12 +745,12 @@ function search() {
 
     
     <ul class="nav-links">
-      <li><a href="" class="active">Home</a></li>
+      <li><a href="index.html" class="active">Home</a></li>
       <li class="dropdown">
         About
         <ul class="dropdown-menu">
-          <li><a href="unit.html">Our Manufacturing Unit</a></li>
-          <li><a href="material.html">Our Material and Quality</a></li>
+          <li><a href="company.html">Our Manufacturing Unit</a></li>
+          <li><a href="materials.html">Our Material and Quality</a></li>
           <li><a href="facilities.html">Our Facilities</a></li>
           <li><a href="advantages.html">Advantages of Our Product</a></li>
         </ul>
@@ -797,51 +801,11 @@ function search() {
         <ul class="dropdown-menu">
           <li><a href="beds.html">Bed's</a></li>
           <li><a href="sofas.html">Sofa set</a></li>
-          <li><a href="dining.html">Dining</a></li>
-          <li><a href="">dressing tables</a></li>
+          <li><a href="facilities.html">Dining</a></li>
+          <li><a href="advantages.html">dressing tables</a></li>
         </ul>
       </li>
-      <style>
-        /* Dropdown submenu on hover */
-.dropdown {
-  position: relative;
-}
 
-.dropdown-menu {
-  position: absolute;
-  top: 100%;
-  left: 0;
-  background-color: #fff;
-  list-style: none;
-  padding: 10px 0;
-  margin: 0;
-  display: none;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-  z-index: 999;
-  min-width: 220px;
-}
-
-.dropdown-menu li {
-  padding: 8px 20px;
-}
-
-.dropdown-menu li a {
-  color: #212121;
-  text-decoration: none;
-  display: block;
-  transition: 0.3s;
-}
-
-.dropdown-menu li a:hover {
-  background-color: #f2f2f2;
-  color: #B71C1C;
-}
-
-.dropdown:hover .dropdown-menu {
-  display: block;
-}
-
-      </style> 
       <li><a href="contact.html">Contact</a></li>
     </ul>
     
@@ -850,7 +814,7 @@ function search() {
     <div class="hero-content" id="heroContent">
       <h1 id="heroTitle">Welcome to Upendar Wood Works</h1>
       <p id="heroSubtitle">Crafting Elegance & Comfort for Every Home</p>
-      <a href="FURNITURE.HTML"><button class="explore-btn">Explore Furniture</button></a>
+      <a href="gallery.html"><button class="explore-btn">Explore Furniture</button></a>
     </div>
     <button class="arrow-btn left" onclick="prevSlide()"><i class="fa-solid fa-arrow-left"></i></button>
     <button class="arrow-btn right" onclick="nextSlide()"><i class="fa-solid fa-arrow-right"></i></button>
@@ -863,7 +827,7 @@ function search() {
     subtitle: " Crafting Elegance & Comfort for Every Home " 
   },
   {
-    image:src="two.webp",
+    image:src="three.jpg",
     title: "Premium Quality Furniture",
     subtitle: "Where Craft Meets Class"
   },
