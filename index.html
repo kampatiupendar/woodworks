@@ -29,9 +29,7 @@
   flex-direction: column;
   background-color: #fff;
   color: #212121;
-  padding-bottom: 20px;
-  padding-top: 20px;
-
+  padding-top: 10px;
   position: sticky;
   top: 0; /* This is missing in your code */
   z-index: 1000; /* Ensures it stays above other content */
@@ -88,7 +86,7 @@
     /* Hero Section */
     .hero {
       height: 85vh;
-      background: url('') center/cover no-repeat;
+      background: url('ONE.jpg') center/cover no-repeat;
       align-items: center;
       justify-content: center;
       text-align: center;
@@ -96,7 +94,7 @@
       position: relative;
     }
     .hero-content{
-      padding-top: 90px;
+      padding-top: 150px;
     }
 
     .hero::after {
@@ -113,6 +111,7 @@
     }
     .hero p{
       color: #212121;
+      font-size: 1rem;
     }
 
     .hero h1 { animation-delay: 0.3s; }
@@ -796,8 +795,16 @@ function search() {
 }
   </style>
      
-      <li><a href="gallery.html">Furniture</a></li>
-      <li><a href="services.html">Services</a></li>
+     <li class="dropdown">
+        Furniture
+        <ul class="dropdown-menu">
+          <li><a href="beds.html">Bed's</a></li>
+          <li><a href="sofas.html">Sofa set</a></li>
+          <li><a href="facilities.html">Dining</a></li>
+          <li><a href="advantages.html">dressing tables</a></li>
+        </ul>
+      </li>
+
       <li><a href="contact.html">Contact</a></li>
     </ul>
     
@@ -806,7 +813,7 @@ function search() {
     <div class="hero-content" id="heroContent">
       <h1 id="heroTitle">Welcome to Upendar Wood Works</h1>
       <p id="heroSubtitle">Crafting Elegance & Comfort for Every Home</p>
-      <a href="gallery.html"><button class="explore-btn">Explore Furniture</button></a>
+      <a href="FURNITURE.HTML"><button class="explore-btn">Explore Furniture</button></a>
     </div>
     <button class="arrow-btn left" onclick="prevSlide()"><i class="fa-solid fa-arrow-left"></i></button>
     <button class="arrow-btn right" onclick="nextSlide()"><i class="fa-solid fa-arrow-right"></i></button>
@@ -964,7 +971,7 @@ window.addEventListener("DOMContentLoaded", updateHero);
       <p>We belive your home should be a reflection of you. We collaborate with clints to create functional and stylish spaces that tell their unique stories. Our passion brings your vision to life, resulting in beautiful and personalized furnitures you'll love.</p>
     </div>
     <div class="content-image">
-      <img src="https://static.vecteezy.com/system/resources/previews/002/387/457/large_2x/professional-carpenter-man-working-with-woodwork-industry-tool-construction-craftsman-person-workshop-with-timber-and-equipment-wood-work-free-photo.jpg" alt="Craftsmanship">
+      <img src="shop.jpg" alt="Craftsmanship">
     </div>
   </section>
  
